@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useAuth } from "./auth";
+import { API_URL } from "./config";
 
 // Create axios instance
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
   },

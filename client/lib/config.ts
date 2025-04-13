@@ -1,8 +1,5 @@
 // API URLs
-export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
-export const UPLOAD_URL =
-  process.env.NEXT_PUBLIC_UPLOAD_URL || "http://localhost:5000/uploads";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 // Site Configuration
 export const SITE_NAME =
