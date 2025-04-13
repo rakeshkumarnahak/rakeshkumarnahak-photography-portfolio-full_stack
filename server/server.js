@@ -51,6 +51,10 @@ mongoose
     console.error("MongoDB connection error:", error);
   });
 
+app.use((req, res) => {
+  res.status(404).send("Route not found");
+});
+
 // Basic route
 app.get("/", (req, res) => {
   res.send("Welcome to the Photography Portfolio API");
