@@ -10,6 +10,7 @@ yarn.lock
 .env
 .env.local
 .env.*.local
+.vercel/
 
 # Logs
 logs/
@@ -56,3 +57,4 @@ media/
 # Misc
 .tmp/
 .temp/
+.vercel

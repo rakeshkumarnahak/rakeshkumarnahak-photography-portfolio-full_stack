@@ -46,9 +46,8 @@ mongoose
     console.log("Connected to MongoDB");
     // Start server
     const PORT = process.env.PORT || 5000;
-    const HOST = '0.0.0.0';
-    app.listen(PORT, HOST, () => {
-      console.log(`Server is running on http://${HOST}:${PORT}``);
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
@@ -60,7 +59,6 @@ app.use((req, res) => {
 });
 
 // Basic route
-
 
 app.get("/api", (req, res) => {
   res.json({ message: "Welcome to the Photography Portfolio API" });
