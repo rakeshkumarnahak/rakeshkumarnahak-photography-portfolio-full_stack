@@ -35,6 +35,10 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/photos", photoRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Photography Portfolio API");
+});
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -56,9 +60,7 @@ app.use((req, res) => {
 });
 
 // Basic route
-app.get("/", (req, res) => {
-  res.send("Welcome to the Photography Portfolio API");
-});
+
 
 app.get("/api", (req, res) => {
   res.json({ message: "Welcome to the Photography Portfolio API" });
